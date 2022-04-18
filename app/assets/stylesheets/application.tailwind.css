@@ -11,3 +11,26 @@
 }
 
 */
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr) 1fr;
+  column-gap: 2rem;
+  align-items: bottom;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-collapse: collapse;
+}
+
+turbo-frame:last-child .table {
+  border-bottom: 1px solid #ccc;
+}
+
+turbo-frame:nth-child(even) .table {
+  background: #fafafa;
+}
+
+.datefield {
+  line-height: 1.12;
+}

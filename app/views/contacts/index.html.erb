@@ -1,14 +1,18 @@
 <div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
-
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Contacts</h1>
-    <%= link_to 'New contact', new_contact_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
-
-  <div id="contacts" class="min-w-full">
-    <%= render @contacts %>
+  <div class="min-w-full my-8">
+    <div class="table font-bold min-w-full">
+      <div>Name</div>
+      <div>Email</div>
+      <div>Age</div>
+      <div>Notes</div>
+      <div></div>
+    </div>
+    <%= turbo_frame_tag "new-contact-form", src: new_contact_path %>
+    <div id="contacts">
+      <%= render @contacts %>
+    </div>
   </div>
 </div>

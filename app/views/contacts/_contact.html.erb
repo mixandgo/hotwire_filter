@@ -1,0 +1,27 @@
+<div id="<%= dom_id contact %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= contact.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Email:</strong>
+    <%= contact.email %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Dob:</strong>
+    <%= contact.dob %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Notes:</strong>
+    <%= contact.notes %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this contact", contact, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this contact', edit_contact_path(contact), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

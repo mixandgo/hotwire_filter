@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include Pagy::Frontend
+
   def age_for(date)
     Date.today.year - date.year
   end

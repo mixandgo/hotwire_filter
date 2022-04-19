@@ -68,3 +68,4 @@ group :development do
   # gem "spring"
 end
 
+gem "pagy", "~> 5.10"

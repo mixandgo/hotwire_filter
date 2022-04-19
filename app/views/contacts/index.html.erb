@@ -18,6 +18,7 @@
     <%= turbo_frame_tag "new-contact-form", src: new_contact_path %>
     <%= turbo_frame_tag "contacts" do %>
       <%= render @contacts %>
+      <%== pagy_nav(@pagy, link_extra: 'data-turbo-action="advance"') %>
     <% end %>
   </div>
 </div>

@@ -120,6 +120,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.4-arm64-darwin)
       racc (~> 1.4)
+    pagy (5.10.1)
+      activesupport
     puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -194,6 +196,7 @@ DEPENDENCIES
   faker
   jbuilder
   jsbundling-rails
+  pagy (~> 5.10)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
   redis (~> 4.0)

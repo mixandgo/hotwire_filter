@@ -3,7 +3,8 @@ class ContactsController < ApplicationController
   before_action :set_contact, only: %i[ show edit update destroy ]
 
   def index
-    @contacts = Contact.where("name LIKE ?", "%#{params[:filter]}%").all
+    filtered = Contact.where("name LIKE ?", "%#{params[:filter]}%")
+    @pagy, @contacts = pagy(filtered.all, items: 10)
   end
 
   def show; end

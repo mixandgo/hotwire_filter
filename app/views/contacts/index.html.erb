@@ -1,6 +1,11 @@
 <div class="w-full">
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Contacts</h1>
+    <div class="">
+      <%= form_with url: contacts_path, method: :get, data: { controller: "form", action: "input->form#submit", turbo_frame: "contacts", turbo_action: "advance" } do %>
+        <%= text_field_tag "filter", nil, placeholder: "Filter", class: "inline-block rounded-md border border-gray-200 outline-none px-3 py-2  w-full" %>
+      <% end %>
+    </div>
   </div>
   <div class="min-w-full my-8">
     <div class="table font-bold min-w-full">
@@ -11,8 +16,8 @@
       <div></div>
     </div>
     <%= turbo_frame_tag "new-contact-form", src: new_contact_path %>
-    <div id="contacts">
+    <%= turbo_frame_tag "contacts" do %>
       <%= render @contacts %>
-    </div>
+    <% end %>
   </div>
 </div>

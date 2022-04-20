@@ -1,24 +1,5 @@
-# README
+How to Add Filtering & Pagination to Your Data Tables With Hotwire
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the repo for the video you can find on Youtube.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://youtu.be/HURqvNJF4T0
